@@ -23,10 +23,4 @@ public class FreezingShot : MonoBehaviour
             Destroy(this.gameObject);
         
     }
-
-    //destroys the freezing shot when it collides with a trigger
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(this.gameObject);
-    }
 }
