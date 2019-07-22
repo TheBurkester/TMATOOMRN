@@ -11,9 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public float attackRange = 1.5f, sightRange = 30f;
 
-    public float maxHealth = 100, currentHealth;
-
-    public Color maxHealthColor = Color.white, minHealthColor = Color.red;
+    public int lives = 3;
 
     private float shotCounter = 0;
     public float shotMax = 2;
@@ -27,7 +25,6 @@ public class EnemyBehaviour : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
-        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -45,10 +42,9 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
         }
 
-        GetComponent<Renderer>().material.color = Color.Lerp(minHealthColor, maxHealthColor, currentHealth / maxHealth);
-        if (currentHealth < 0)
+        if (lives <= 0)
         {
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
         //Checks to see if the player has the ability to shoot
         //if they can't shoot on that frame
@@ -70,7 +66,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (shotActive == true)
         {
-            enemyShot.gameObject.GetComponent<FreezingShot>().shotSpeed = shootingSpeed;
+            enemyShot.gameObject.GetComponent<BulletBehaviour>().shotSpeed = shootingSpeed;
             Instantiate(enemyShot, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
             shotActive = false;
         }
@@ -88,7 +84,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Shoot")
         {
-            this.currentHealth -= 15;
+            this.lives -= 1;
         }
     }
 }

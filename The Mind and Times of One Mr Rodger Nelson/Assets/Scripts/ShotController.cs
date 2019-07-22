@@ -48,7 +48,7 @@ public class ShotController : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 //instantiates a freezing shot at the spawn point with the same rotation
-                shotToShoot.gameObject.GetComponent<FreezingShot>().shotSpeed = shootingSpeed;
+                shotToShoot.gameObject.GetComponent<BulletBehaviour>().shotSpeed = shootingSpeed;
                 Instantiate(shotToShoot, shotSpawner.position, shotSpawner.rotation); 
 
                 //disables the player's ability to shoot to prevent spamming of bullets
