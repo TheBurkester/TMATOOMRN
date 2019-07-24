@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 9d0befab9227f1e44a2e436bf054b701
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Level_Geom2:Cube
+    100004: Level_Geom2:Cube1
+    100006: Level_Geom2:Cube_10_
+    100008: Level_Geom2:Cube_11_
+    100010: Level_Geom2:Cube_12_
+    100012: Level_Geom2:Cube_13_
+    100014: Level_Geom2:Cube_14_
+    100016: Level_Geom2:Cube_15_
+    100018: Level_Geom2:Cube_1_
+    100020: Level_Geom2:Cube_2_
+    100022: Level_Geom2:Cube_3_
+    100024: Level_Geom2:Cube_4_
+    100026: Level_Geom2:Cube_5_
+    100028: Level_Geom2:Cube_6_
+    100030: Level_Geom2:Cube_7_
+    100032: Level_Geom2:Cube_8_
+    100034: Level_Geom2:Cube_9_
+    100036: pCube3
+    100038: pCube5
+    100040: pCube6
+    100042: pCube7
+    100044: PlayerController
+    400000: //RootNode
+    400002: Level_Geom2:Cube
+    400004: Level_Geom2:Cube1
+    400006: Level_Geom2:Cube_10_
+    400008: Level_Geom2:Cube_11_
+    400010: Level_Geom2:Cube_12_
+    400012: Level_Geom2:Cube_13_
+    400014: Level_Geom2:Cube_14_
+    400016: Level_Geom2:Cube_15_
+    400018: Level_Geom2:Cube_1_
+    400020: Level_Geom2:Cube_2_
+    400022: Level_Geom2:Cube_3_
+    400024: Level_Geom2:Cube_4_
+    400026: Level_Geom2:Cube_5_
+    400028: Level_Geom2:Cube_6_
+    400030: Level_Geom2:Cube_7_
+    400032: Level_Geom2:Cube_8_
+    400034: Level_Geom2:Cube_9_
+    400036: pCube3
+    400038: pCube5
+    400040: pCube6
+    400042: pCube7
+    400044: PlayerController
+    2100000: lambert13
+    2100002: Level_Geom2_Default_Prototype1
+    2100004: lambert1
+    2300000: Level_Geom2:Cube
+    2300002: Level_Geom2:Cube1
+    2300004: Level_Geom2:Cube_10_
+    2300006: Level_Geom2:Cube_11_
+    2300008: Level_Geom2:Cube_12_
+    2300010: Level_Geom2:Cube_13_
+    2300012: Level_Geom2:Cube_14_
+    2300014: Level_Geom2:Cube_15_
+    2300016: Level_Geom2:Cube_1_
+    2300018: Level_Geom2:Cube_2_
+    2300020: Level_Geom2:Cube_3_
+    2300022: Level_Geom2:Cube_4_
+    2300024: Level_Geom2:Cube_5_
+    2300026: Level_Geom2:Cube_6_
+    2300028: Level_Geom2:Cube_7_
+    2300030: Level_Geom2:Cube_8_
+    2300032: Level_Geom2:Cube_9_
+    2300034: pCube3
+    2300036: pCube5
+    2300038: pCube6
+    2300040: pCube7
+    2300042: PlayerController
+    3300000: Level_Geom2:Cube
+    3300002: Level_Geom2:Cube1
+    3300004: Level_Geom2:Cube_10_
+    3300006: Level_Geom2:Cube_11_
+    3300008: Level_Geom2:Cube_12_
+    3300010: Level_Geom2:Cube_13_
+    3300012: Level_Geom2:Cube_14_
+    3300014: Level_Geom2:Cube_15_
+    3300016: Level_Geom2:Cube_1_
+    3300018: Level_Geom2:Cube_2_
+    3300020: Level_Geom2:Cube_3_
+    3300022: Level_Geom2:Cube_4_
+    3300024: Level_Geom2:Cube_5_
+    3300026: Level_Geom2:Cube_6_
+    3300028: Level_Geom2:Cube_7_
+    3300030: Level_Geom2:Cube_8_
+    3300032: Level_Geom2:Cube_9_
+    3300034: pCube3
+    3300036: pCube5
+    3300038: pCube6
+    3300040: pCube7
+    3300042: PlayerController
+    4300000: PlayerController
+    4300002: Level_Geom2:Cube_11_
+    4300004: Level_Geom2:Cube_2_
+    4300006: Level_Geom2:Cube_6_
+    4300008: Level_Geom2:Cube_1_
+    4300010: Level_Geom2:Cube_3_
+    4300012: Level_Geom2:Cube_15_
+    4300014: Level_Geom2:Cube_9_
+    4300016: Level_Geom2:Cube
+    4300018: Level_Geom2:Cube_7_
+    4300020: Level_Geom2:Cube1
+    4300022: Level_Geom2:Cube_4_
+    4300024: Level_Geom2:Cube_8_
+    4300026: Level_Geom2:Cube_5_
+    4300028: Level_Geom2:Cube_10_
+    4300030: Level_Geom2:Cube_12_
+    4300032: Level_Geom2:Cube_13_
+    4300034: Level_Geom2:Cube_14_
+    4300036: pCube3
+    4300038: pCube5
+    4300040: pCube6
+    4300042: pCube7
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

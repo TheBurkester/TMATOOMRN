@@ -69,9 +69,7 @@
     <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemy Controller.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement1.cs" />
     <Compile Include="Assets\Scripts\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\ShotController.cs" />
@@ -96,6 +94,7 @@
     <None Include="Assets\Textures\Oh thats nice.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
+    <None Include="Assets\Prefabs\Huhhhhhh.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
