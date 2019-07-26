@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &203062201614617126
 Transform:
@@ -44,6 +44,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Office Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174287907875783966, guid: fc481e7df6bf213478ea52edb454e024,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9174287907876149566, guid: fc481e7df6bf213478ea52edb454e024,
         type: 3}
@@ -120,6 +125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer Set (Right)
       objectReference: {fileID: 0}
+    - target: {fileID: 6361350031546962566, guid: 101a0941684cc5047a83a9444d06f6d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6361350031546601126, guid: 101a0941684cc5047a83a9444d06f6d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -194,6 +204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Computer Set (Left)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630155853139382614, guid: 5566ab0413c3e60469868101a5b0b1c9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6630155853139676534, guid: 5566ab0413c3e60469868101a5b0b1c9,
         type: 3}

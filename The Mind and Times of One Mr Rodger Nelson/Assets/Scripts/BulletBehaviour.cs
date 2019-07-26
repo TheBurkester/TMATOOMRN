@@ -6,24 +6,22 @@ public class BulletBehaviour : MonoBehaviour
 {
     //how fast the shot travels when it is created
     [HideInInspector]
-    public float shotSpeed = 5;
+    public float shotSpeed;
  
 
     // Update is called once per frame
     void Update()
     {
-        //moves the freezing shot each frame
+        //moves the  shot each frame
         transform.position += (transform.forward * shotSpeed * Time.deltaTime);
     }
 
-    //destroys the freezing shot upon colliding with something
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-            Destroy(this.gameObject);
-        
-    }
+    //destroys the shot upon colliding with something
     private void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+    }
+    private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);
     }

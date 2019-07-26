@@ -112,6 +112,7 @@ public class EnemyBehaviour : MonoBehaviour
             agent.SetDestination(player.transform.position);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Shoot")

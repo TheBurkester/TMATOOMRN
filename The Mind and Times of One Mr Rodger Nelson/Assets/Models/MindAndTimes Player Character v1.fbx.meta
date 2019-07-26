@@ -1,27 +1,14 @@
 fileFormatVersion: 2
-guid: 4411c12eff4f36a4fb54e4fc9008c01f
+guid: 761cd95463738354ab60d0fa32f63eb3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCube19
-    100004: pCube8
-    100006: pCube9
     400000: //RootNode
-    400002: pCube19
-    400004: pCube8
-    400006: pCube9
-    2100000: lambert1
-    2300000: pCube19
-    2300002: pCube8
-    2300004: pCube9
-    3300000: pCube19
-    3300002: pCube8
-    3300004: pCube9
-    4300000: pCube8
-    4300002: pCube19
-    4300004: pCube9
-    2186277476908879412: ImportLogs
+    2100000: lambert13
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: PlayerController
   externalObjects: {}
   materials:
     importMaterials: 1

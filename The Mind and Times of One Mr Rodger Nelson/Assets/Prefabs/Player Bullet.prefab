@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5285575887231322665}
   - component: {fileID: 5285575887232321769}
   - component: {fileID: 441399766369048820}
-  - component: {fileID: 1906358635512729932}
+  - component: {fileID: 5063089368789641627}
   m_Layer: 0
   m_Name: Player Bullet
   m_TagString: Shoot
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: f9771de7d6f82ee469d7941b20d40da2, type: 3}
+  - {fileID: 2100000, guid: aec093c1199db2f428d958392a80b399, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,12 +87,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5285575887234324009}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.18503457
+  m_Radius: 0.2
   m_Center: {x: -0.000000007450581, y: 0.03998221, z: -0.000000014901161}
---- !u!114 &1906358635512729932
+--- !u!114 &5063089368789641627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5285575887234324009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa9f0d5f8261f54791e1e7218181944, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bbaaaf81bf96d04a8e5e122a97b5644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 5
+  shotSpeed: 0

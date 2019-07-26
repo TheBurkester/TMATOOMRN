@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 6783438250362575832}
   - component: {fileID: 6783438250362575829}
   - component: {fileID: 6783438250362575828}
-  - component: {fileID: 6265923630838911099}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,15 +95,11 @@ MonoBehaviour:
     type: 3}
   shotSpawner: {fileID: 6783438250927584928}
   shotTimer: 1
+  shotCounter: 0
   shootingSpeed: 10
---- !u!81 &6265923630838911099
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6783438250362575833}
-  m_Enabled: 1
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
 --- !u!1 &6783438250927584929
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +189,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 306f2b36ad996104aaea8f6e489ec253, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e94282ab5ae963641b7abbab92b2e175, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 306f2b36ad996104aaea8f6e489ec253, type: 3}
 --- !u!4 &6783438251228004446 stripped
