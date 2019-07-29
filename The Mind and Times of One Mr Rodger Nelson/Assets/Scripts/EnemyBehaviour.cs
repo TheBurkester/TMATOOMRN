@@ -71,11 +71,10 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (lives <= 0)
         {
-            audioManager.clip = deathSound;
-            audioManager.Play();
-            this.gameObject.SetActive(false);
+            die();
         }
-        //Checks to see if the player has the ability to shoot
+
+        //Checks to see if the enemy has the ability to shoot
         //if they can't shoot on that frame
         if(ranged == true)
         {
@@ -115,9 +114,17 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Shoot")
+        if(other.gameObject.tag == "Bullet")
         {
-            this.lives -= 1;
+            lives -= 1;
+            Debug.Log(lives);
+            Destroy(other.gameObject);
         }
+    }
+    void die()
+    {
+        audioManager.clip = deathSound;
+        audioManager.Play();
+        this.gameObject.SetActive(false);
     }
 }

@@ -23,7 +23,6 @@ public class CameraFollow : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log(gameObject.name);
             cameraScript.destination = cameraPoint;
         }
 
