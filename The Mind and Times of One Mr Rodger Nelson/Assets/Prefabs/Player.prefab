@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6783438250362575832}
   - component: {fileID: 6783438250362575829}
   - component: {fileID: 6783438250362575828}
+  - component: {fileID: 364887712}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -78,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a814b732e43e8814aabc99bb6688ccb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
 --- !u!114 &6783438250362575828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +101,14 @@ MonoBehaviour:
   life1: {fileID: 0}
   life2: {fileID: 0}
   life3: {fileID: 0}
+--- !u!81 &364887712
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783438250362575833}
+  m_Enabled: 1
 --- !u!1 &6783438250927584929
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6783438250927584929}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.835, y: 0.721, z: -0}
+  m_LocalPosition: {x: -80.6, y: 69, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6783438251228004446}

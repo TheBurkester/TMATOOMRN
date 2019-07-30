@@ -16,16 +16,15 @@ public class EnemyBehaviour : MonoBehaviour
     //a tracker for the enemey's lives
     public int lives = 3;
 
-    //a boolean to track if the enemy is ranged or melee
-    public bool ranged;
-
-    //elements related to the enemy being ranged
+    //elements related to the enemy attacking
     private float shotCounter = 0;
-    public float shotMax = 2;
+    public float shotMax = 1.5f;
     private bool shotActive = true;
     public GameObject enemyShot;
     public Transform bulletSpawnPoint;
     public float shootingSpeed = 5;
+
+    private bool dead = false;
 
     public AudioClip deathSound;
     private AudioSource audioManager;
@@ -37,21 +36,10 @@ public class EnemyBehaviour : MonoBehaviour
         //finds the player object and gets the enemy to move towards it when it sees it
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
-
-        //checks what attack type the enemy is
-
-        //if the enemy is ranged, gives it higher attack range but lower sight range
-        if (ranged == true)
-        {
-            attackRange = 1.5f;
+      
+            attackRange = 4.0f;
             sightRange = 30f;
-        }
-        //else if the enemy is a melee enemy
-        else
-        {
-            attackRange = 0.5f;
-            sightRange = 35f;
-        }
+    
     }
 
     // Update is called once per frame
@@ -76,8 +64,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         //Checks to see if the enemy has the ability to shoot
         //if they can't shoot on that frame
-        if(ranged == true)
-        {
+        
             if (shotActive == false)
             {
                 //increases the time on the shotCounter based on how much time has passed
@@ -90,20 +77,25 @@ public class EnemyBehaviour : MonoBehaviour
                     shotCounter = 0.0f;
                 }
             }
-        }
+        
     }
 
     void Attack()
     {
-       if(ranged == true && shotActive == true)
+        //if the enemy has the ability to shoot and it's not dead
+       if(shotActive == true && dead == false)
         {
+            //sets the shot speed of the bullet prefab to match the speed attached to the enemy
             enemyShot.gameObject.GetComponent<BulletBehaviour>().shotSpeed = shootingSpeed;
+            //creates a bullet
             Instantiate(enemyShot, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
             shotActive = false;
         }
+       //resets the enemy's path
         agent.ResetPath();
 
     }
+    //moves the enemy towards the player
         void MoveToPlayer()
     {
         if (!Physics.Linecast(player.transform.position, transform.position, out RaycastHit hitinfo, ~(1 << 9 | 1 << 10)))
@@ -112,6 +104,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    //Occurs when a bullet from the player collides with the enemy
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Bullet")
@@ -121,10 +114,14 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    //the instance that the enemy dies
     void die()
     {
         audioManager.clip = deathSound;
         audioManager.Play();
-        this.gameObject.SetActive(false);
+        Destroy(this.GetComponent<MeshRenderer>());
+        Destroy(this.GetComponent<SphereCollider>());
+        shootingSpeed = 0;
+        dead = true;
     }
 }

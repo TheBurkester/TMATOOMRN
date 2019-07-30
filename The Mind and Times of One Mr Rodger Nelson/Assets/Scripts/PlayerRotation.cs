@@ -9,9 +9,7 @@ public class PlayerRotation : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-
+    { 
         //Following is Courtesy of James Leung
         //creates a ray that is to be projected onto the screen
         Ray orientRay = Camera.main.ScreenPointToRay(Input.mousePosition);
