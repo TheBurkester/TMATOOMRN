@@ -27,7 +27,15 @@ public class EnemyBehaviour : MonoBehaviour
     private bool dead = false;
 
     public AudioClip deathSound;
+
+    private int audioCounter;
+
+    private float activeCounter;
+    private float activeMax;
+
     private AudioSource audioManager;
+
+    public List<AudioClip> audioList;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +47,8 @@ public class EnemyBehaviour : MonoBehaviour
       
             attackRange = 4.0f;
             sightRange = 30f;
-    
+        activeCounter = Random.Range(0.0f, 1.5f);
+        activeMax = Random.Range(6.0f, 10.0f);
     }
 
     // Update is called once per frame
@@ -57,9 +66,24 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
         }
 
+        //the instance that the enemy dies
         if (lives <= 0)
         {
-            die();
+            audioManager.clip = deathSound;
+            AudioSource.PlayClipAtPoint(audioManager.clip, transform.position);
+            Destroy(this.gameObject);
+        }
+
+        if (activeCounter <= activeMax)
+        {
+            activeCounter += Time.deltaTime;
+        }
+        if (activeCounter >= activeMax)
+        {
+            int soundByte = Random.Range(0, 3);
+            audioManager.clip = audioList[soundByte];
+            AudioSource.PlayClipAtPoint(audioList[soundByte], transform.position);
+            activeCounter = Random.Range(0.0f, 1.5f);
         }
 
         //Checks to see if the enemy has the ability to shoot
@@ -77,13 +101,12 @@ public class EnemyBehaviour : MonoBehaviour
                     shotCounter = 0.0f;
                 }
             }
-        
     }
 
     void Attack()
     {
         //if the enemy has the ability to shoot and it's not dead
-       if(shotActive == true && dead == false)
+       if(shotActive == true)
         {
             //sets the shot speed of the bullet prefab to match the speed attached to the enemy
             enemyShot.gameObject.GetComponent<BulletBehaviour>().shotSpeed = shootingSpeed;
@@ -114,14 +137,5 @@ public class EnemyBehaviour : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    //the instance that the enemy dies
-    void die()
-    {
-        audioManager.clip = deathSound;
-        audioManager.Play();
-        Destroy(this.GetComponent<MeshRenderer>());
-        Destroy(this.GetComponent<SphereCollider>());
-        shootingSpeed = 0;
-        dead = true;
-    }
+  
 }
