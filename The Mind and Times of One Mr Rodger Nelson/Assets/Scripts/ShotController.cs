@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShotController : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class ShotController : MonoBehaviour
     public GameObject life2;
     public GameObject life3;
 
-    private int playerHealth = 3;
+    [HideInInspector]
+    public int playerHealth = 3;
 
     private float invincibiliyTimer = 0.0f;
     private float invincibilityThreshold;
@@ -98,10 +100,9 @@ public class ShotController : MonoBehaviour
         else if (playerHealth == 0)
         {
             life1.SetActive(false);
-            this.GetComponent<PlayerMovement1>().speed = 0;
+            SceneManager.LoadScene(1);
         }
         //sets the invincible state to true, so that the player can't take too much damage in a short amount of time
         invincible = true;
     }
-
 }

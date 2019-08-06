@@ -9,6 +9,8 @@ public class BulletBehaviour : MonoBehaviour
     public AudioClip miss;
     public AudioClip hit;
 
+    public GameObject particles;
+
     //how fast the shot travels when it is created
     [HideInInspector]
     public float shotSpeed;
@@ -32,6 +34,7 @@ public class BulletBehaviour : MonoBehaviour
         audioManager.clip = miss;
         audioManager.Play();
         AudioSource.PlayClipAtPoint(audioManager.clip, transform.position);
+        Instantiate(particles, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
     private void OnCollisionEnter(Collision collision)
@@ -39,12 +42,14 @@ public class BulletBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player")
         {
             audioManager.clip = hit;
+           
         }
         else
         {
             audioManager.clip = miss;
         }
         AudioSource.PlayClipAtPoint(audioManager.clip, transform.position);
+        Instantiate(particles, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

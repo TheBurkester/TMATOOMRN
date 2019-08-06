@@ -33,6 +33,8 @@ public class EnemyBehaviour : MonoBehaviour
     private float activeCounter;
     private float activeMax;
 
+    public GameObject worldController;
+
     private AudioSource audioManager;
 
     public List<AudioClip> audioList;
@@ -49,13 +51,14 @@ public class EnemyBehaviour : MonoBehaviour
             sightRange = 30f;
         activeCounter = Random.Range(0.0f, 1.5f);
         activeMax = Random.Range(6.0f, 10.0f);
+        worldController.GetComponent<EndgameController>().enemiesLeft += 1;
     }
 
     // Update is called once per frame
     void Update()
     {
         switch (Vector3.Distance(player.transform.position, transform.position))
-        {
+         {
             case float i when i < attackRange:
                 Attack();
                 break;
@@ -71,6 +74,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             audioManager.clip = deathSound;
             AudioSource.PlayClipAtPoint(audioManager.clip, transform.position);
+            worldController.GetComponent<EndgameController>().enemiesLeft -= 1;
             Destroy(this.gameObject);
         }
 
@@ -126,16 +130,11 @@ public class EnemyBehaviour : MonoBehaviour
             agent.SetDestination(player.transform.position);
         }
     }
-
-    //Occurs when a bullet from the player collides with the enemy
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Bullet")
+        if(other.tag == "Bullet")
         {
             lives -= 1;
-            Debug.Log(lives);
-            Destroy(other.gameObject);
         }
     }
-  
 }

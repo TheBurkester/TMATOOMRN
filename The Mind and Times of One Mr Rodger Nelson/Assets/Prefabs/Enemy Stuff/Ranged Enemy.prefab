@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471e5db0d5905af4a8a53650fc0cbba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 10
+  attackRange: 20
   sightRange: 10
   lives: 3
   shotMax: 2
@@ -218,7 +218,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 189973787}
   shootingSpeed: 5
   deathSound: {fileID: 8300000, guid: 2d0eb1380c37d9f49aa844f4daedb8f8, type: 3}
-  activeMax: 6
+  worldController: {fileID: 0}
   audioList:
   - {fileID: 8300000, guid: 4f4da2835988aac40bc34e3763f8136b, type: 3}
   - {fileID: 8300000, guid: 37afb7c4d47ec5242b21075ebaa24d17, type: 3}

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Opening Scene.unity
+    guid: 3924b816b45e74f4c84c4c3a85ab19bc
+  - enabled: 1
+    path: Assets/Scenes/The Mind And Times Of A One Mr Rodger Nelson.unity
     guid: 144fc7a55cbb894419caa207b634f78c
+  - enabled: 1
+    path: Assets/Scenes/Ending Scene.unity
+    guid: 5929425ca8e0d2747a101a99d35ff0d8
   m_configObjects: {}

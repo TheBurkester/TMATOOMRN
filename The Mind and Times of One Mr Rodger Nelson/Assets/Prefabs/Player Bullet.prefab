@@ -108,8 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 3687974086028489138}
   shootSound: {fileID: 8300000, guid: 76cfb647751143b4caabba9d5cdd240e, type: 3}
-  miss: {fileID: 8300000, guid: 5ace49bc0cef9dd4aa626deede116feb, type: 3}
+  miss: {fileID: 8300000, guid: 7284fc76b71c724458c9952bf2ad3f63, type: 3}
   hit: {fileID: 8300000, guid: 0a2b0d5ca221ad542829ff057e9afa05, type: 3}
+  particles: {fileID: 1395267535839443670, guid: 167e4a1d62cfb4c49b26139bfa9d0448,
+    type: 3}
   shotSpeed: 0
 --- !u!54 &8239209164116556350
 Rigidbody:
